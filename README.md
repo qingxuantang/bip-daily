@@ -12,6 +12,12 @@
 
 An AI-powered automation system for Build-in-Public content creation. Monitor your projects, generate social media posts from your actual work, and publish automatically.
 
+### Video Tutorial
+
+[![BIP Tutorial](https://img.youtube.com/vi/Zbn9Vd5FF9c/maxresdefault.jpg)](https://youtu.be/Zbn9Vd5FF9c)
+
+> Click the image above to watch the tutorial on YouTube
+
 ## Features
 
 - **Multi-Project Management** - Monitor multiple Git repositories simultaneously
@@ -281,6 +287,12 @@ MIT License - see [LICENSE](LICENSE) for details.
 # BIP - Build-in-Public 自动化系统
 
 一个基于 AI 的 Build-in-Public 内容创作自动化系统。监控你的项目，从实际工作中生成社交媒体帖子，并自动发布。
+
+### 视频教程
+
+[![BIP 教程](https://img.youtube.com/vi/Zbn9Vd5FF9c/maxresdefault.jpg)](https://youtu.be/Zbn9Vd5FF9c)
+
+> 点击上方图片在 YouTube 观看教程
 
 ## 功能特性
 
