@@ -1,0 +1,86 @@
+# =============================================================================
+# BIP Project Configuration
+# =============================================================================
+# Copy this file to projects.yaml and customize for your projects
+#
+# Projects defined here are monitored for:
+# - Git commits (for Build-in-Public posts)
+# - Launch plan tasks (for calendar generation)
+# - Morning meeting reports
+
+projects:
+  # -------------------------------------------------------------------------
+  # Public Projects (included in Build-in-Public posts)
+  # -------------------------------------------------------------------------
+  - name: my-saas-project
+    path: ../my-saas-project          # Relative path from bip directory
+    type: saas
+    description: "My SaaS product description"
+    public: true
+    monitors:
+      - README.md
+      - launch-plan.md
+    keywords:
+      - SaaS
+      - productivity
+      - automation
+
+  - name: my-api-project
+    path: ../my-api-project
+    type: api
+    description: "Backend API service"
+    public: true
+    keywords:
+      - API
+      - backend
+      - microservices
+
+  - name: my-tool-project
+    path: ../my-tool-project
+    type: tool
+    description: "Developer utility tool"
+    public: true
+    keywords:
+      - CLI
+      - developer-tools
+
+  - name: my-content-project
+    path: ../my-content-project
+    type: content
+    description: "Content creation and marketing"
+    public: true
+    keywords:
+      - content-marketing
+      - automation
+
+  # -------------------------------------------------------------------------
+  # Private Projects (tracked for meetings/calendar, NOT for public posts)
+  # -------------------------------------------------------------------------
+  # - name: private-trading
+  #   path: ../private-trading
+  #   type: trading
+  #   public: false
+  #   description: "Private trading system"
+  #   keywords:
+  #     - trading
+  #     - quantitative
+
+# =============================================================================
+# Generation Settings
+# =============================================================================
+generation:
+  styles:
+    - casual_update       # Daily updates
+    - technical_deep      # Technical deep-dives
+    - milestone           # Milestone celebrations
+    - challenge           # Challenges and learnings
+    - weekly_summary      # Weekly summaries
+
+  templates:
+    - templates/daily_progress.j2
+
+  tone:
+    - authentic           # Be genuine
+    - helpful             # Share value
+    - enthusiastic        # Show passion
+    - humble              # Acknowledge learning

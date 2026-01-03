@@ -1,0 +1,40 @@
+# Core dependencies
+python-dotenv==1.0.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+pyyaml>=6.0  # For YAML config parsing
+
+# Data collection
+GitPython==3.1.40
+watchdog==3.0.0
+
+# AI and content generation
+openai>=1.6.1
+anthropic>=0.39.0
+google-genai>=1.0.0  # For Gemini API (text + Imagen 3 images)
+jinja2==3.1.2
+
+# Scheduling
+APScheduler==3.10.4
+
+# Database
+sqlalchemy==2.0.23
+
+# Web automation for Xiaohongshu
+selenium>=4.16.0
+pillow>=10.1.0
+playwright>=1.40.0
+
+# CLI interface
+click==8.1.7
+rich==13.7.0
+inquirer==3.1.4
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3
+html2text==2024.2.26  # Optional: better HTML to text conversion for URL content fetching
+
+# SFTP for calendar upload
+pysftp==0.2.9
+paramiko<4.0.0  # pysftp 0.2.9 incompatible with paramiko 4.0+

@@ -1,0 +1,27 @@
+services:
+  bip:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bip
+    volumes:
+      # Persistent data (database, generated content)
+      - ./data:/app/data
+      # Configuration files (projects.yaml, cookies)
+      - ./config:/app/config
+      # Application logs
+      - ./logs:/app/logs
+      # Monitored project repositories (read-only)
+      # IMPORTANT: Set PROJECTS_DIR in .env to your projects parent directory
+      # Example: PROJECTS_DIR=D:/git_repo or PROJECTS_DIR=/home/user/projects
+      - ${PROJECTS_DIR:?Set PROJECTS_DIR in .env}:/projects:ro
+    env_file:
+      - .env
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=${TIMEZONE:-Asia/Shanghai}
+    working_dir: /app
+    # Override entrypoint for interactive use
+    # entrypoint: ["/bin/bash"]
+    stdin_open: true
+    tty: true

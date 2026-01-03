@@ -1,0 +1,200 @@
+# =============================================================================
+# BIP Advanced Settings (Tier 3)
+# =============================================================================
+# This file is OPTIONAL. Delete sections you don't need to customize.
+# Default values are built into the code (see src/config.py BIPSettings.DEFAULTS)
+#
+# To customize:
+#   1. Uncomment the sections you want to change
+#   2. Modify the values
+#   3. Restart the application
+#
+# Changes here override the built-in defaults but can be overridden by .env
+
+# -----------------------------------------------------------------------------
+# AI Model Configuration
+# -----------------------------------------------------------------------------
+# Customize which AI models to use for text and image generation
+#
+# ai_models:
+#   text:
+#     anthropic: "claude-sonnet-4-5-20250929"
+#     gemini: "gemini-2.5-flash"
+#     openai: "gpt-4-turbo-preview"
+#   image:
+#     primary: "gemini-3-pro-image-preview"
+#     fallback: "gemini-2.5-flash-preview-05-20"
+#     openai: "dall-e-3"
+
+# -----------------------------------------------------------------------------
+# Platform Posting Schedules
+# -----------------------------------------------------------------------------
+# Optimal posting times for each platform (in your timezone)
+# Add your own platforms or modify existing ones
+#
+# posting_schedules:
+#   xiaohongshu:
+#     - "12:00"   # Lunch break
+#     - "18:30"   # After work
+#     - "21:00"   # Evening browsing
+#   twitter:
+#     - "09:00"   # Morning commute
+#     - "12:00"   # Lunch break
+#     - "17:00"   # End of work day
+#   linkedin:
+#     - "08:00"
+#     - "12:00"
+#     - "17:30"
+#   default:
+#     - "12:00"
+#     - "18:00"
+
+# -----------------------------------------------------------------------------
+# Scheduling Limits
+# -----------------------------------------------------------------------------
+# scheduling:
+#   daily_quota: 2        # Max posts per platform per day
+#   max_days_ahead: 30    # How far ahead to schedule posts
+
+# -----------------------------------------------------------------------------
+# Platform Image Dimensions
+# -----------------------------------------------------------------------------
+# Optimal image sizes for each platform
+#
+# platform_dimensions:
+#   xiaohongshu:
+#     width: 1080
+#     height: 1440    # 3:4 aspect ratio
+#   twitter:
+#     width: 1200
+#     height: 675     # 16:9 aspect ratio
+#   instagram:
+#     width: 1080
+#     height: 1080    # 1:1 square
+#   linkedin:
+#     width: 1200
+#     height: 627
+#   default:
+#     width: 1200
+#     height: 675
+
+# -----------------------------------------------------------------------------
+# Brand Colors
+# -----------------------------------------------------------------------------
+# Your brand colors for image generation prompts
+#
+# brand_colors:
+#   primary: "#4A90D9"     # Main brand color (tech blue)
+#   secondary: "#FF6B6B"   # Accent color (coral)
+#   accent: "#2ECC71"      # Highlight color (green)
+
+# -----------------------------------------------------------------------------
+# Post Type Visual Styles
+# -----------------------------------------------------------------------------
+# Visual style descriptions for each post type (used in image generation)
+#
+# post_type_styles:
+#   technical: "Clean, modern tech aesthetic with subtle gradients. Vector-style icons and diagrams. Professional color palette."
+#   story: "Warm, inviting illustration style. Hand-drawn elements with soft shadows. Narrative visual flow."
+#   tool_review: "Product photography style. Clean backgrounds with subtle depth. Professional lighting simulation."
+#   productivity: "Isometric 3D style. Organized workspace elements. Calm, focused color palette."
+#   announcement: "Bold, celebratory graphics. Dynamic composition with energy. Bright, optimistic colors."
+#   reflection: "Minimalist conceptual art. Thoughtful negative space. Muted, sophisticated palette."
+
+# -----------------------------------------------------------------------------
+# Post Type Detection Keywords
+# -----------------------------------------------------------------------------
+# Keywords used to automatically detect post types from content
+#
+# post_type_keywords:
+#   technical:
+#     - "api"
+#     - "code"
+#     - "debug"
+#     - "implement"
+#     - "architecture"
+#     - "database"
+#     - "algorithm"
+#   story:
+#     - "journey"
+#     - "learned"
+#     - "realized"
+#     - "story"
+#     - "experience"
+#     - "mistake"
+#     - "growth"
+#   tool_review:
+#     - "tool"
+#     - "review"
+#     - "compared"
+#     - "tried"
+#     - "switched"
+#     - "using"
+#     - "recommend"
+#   productivity:
+#     - "productivity"
+#     - "workflow"
+#     - "routine"
+#     - "habit"
+#     - "system"
+#     - "organize"
+#   announcement:
+#     - "launch"
+#     - "release"
+#     - "announce"
+#     - "introducing"
+#     - "new"
+#     - "milestone"
+#     - "achieved"
+#   reflection:
+#     - "reflect"
+#     - "thinking"
+#     - "wondering"
+#     - "perspective"
+#     - "insight"
+#     - "observation"
+
+# -----------------------------------------------------------------------------
+# Tech Keywords for Topic Detection
+# -----------------------------------------------------------------------------
+# Keywords to identify tech topics in content
+#
+# tech_keywords:
+#   - "API"
+#   - "SaaS"
+#   - "FIRE"
+#   - "Docker"
+#   - "FastAPI"
+#   - "PostgreSQL"
+#   - "Redis"
+#   - "Kubernetes"
+#   - "MongoDB"
+#   - "React"
+#   - "Vue"
+#   - "Python"
+#   - "TypeScript"
+#   - "JavaScript"
+#   - "Go"
+#   - "Rust"
+#   - "Java"
+#   - "Node.js"
+#   - "GraphQL"
+#   - "REST"
+#   - "AWS"
+#   - "GCP"
+#   - "Azure"
+#   - "CI/CD"
+#   - "DevOps"
+#   - "Microservices"
+
+# -----------------------------------------------------------------------------
+# Content Limits
+# -----------------------------------------------------------------------------
+# Various size and timeout limits
+#
+# content_limits:
+#   whisper_max_size_mb: 25         # Max audio file size for Whisper API
+#   url_content_max_chars: 10000    # Max characters to extract from URLs
+#   http_timeout_seconds: 30        # HTTP request timeout
+#   audio_chunk_min_seconds: 60     # Min audio chunk duration
+#   audio_chunk_max_seconds: 600    # Max audio chunk duration

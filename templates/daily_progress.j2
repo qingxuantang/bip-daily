@@ -1,0 +1,31 @@
+最近{% if active_projects|length > 1 %}同时推进{{ active_projects|length }}个项目{% else %}在折腾一个项目{% endif %}，{{ opening_hook }}～
+
+{% if time_context %}{{ time_context }}{% else %}这周{% endif %}主要在折腾{% if projects_summary|length == 1 %}：{{ projects_summary[0] }}{% else %}这几件事：{% for summary in projects_summary %}{{ summary }}{% if not loop.last %}，{% endif %}{% endfor %}{% endif %}。
+
+🛠 具体进展
+
+{% for project in project_details %}
+**{{ project.name }} | {{ project.subtitle }}**
+{% for item in project.items %}
+• {{ item }}
+{% endfor %}
+{% if project.context %}• {{ project.context }}
+{% endif %}
+
+{% endfor %}
+💡 {{ thinking_section_title }}
+
+{% for thought in thoughts %}
+{{ loop.index }}. {{ thought }}
+{% endfor %}
+
+📊 数据一览
+{% for stat in statistics %}
+• {{ stat }}
+{% endfor %}
+
+---
+
+{{ closing_statement }}
+
+#BuildInPublic #独立开发 {% for tag in hashtags %}#{{ tag }} {% endfor %}

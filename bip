@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# BIP - Build-in-Public CLI Entry Script
+# This script ensures the correct Python environment is used
+
+# Get the directory of this script
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Check for virtual environment in order of preference
+if [ -d "$SCRIPT_DIR/venv" ]; then
+    PYTHON="$SCRIPT_DIR/venv/bin/python"
+elif [ -d "$SCRIPT_DIR/autogen" ]; then
+    PYTHON="$SCRIPT_DIR/autogen/bin/python"
+elif [ -d "$SCRIPT_DIR/.venv" ]; then
+    PYTHON="$SCRIPT_DIR/.venv/bin/python"
+else
+    # Fall back to system Python
+    PYTHON="python3"
+fi
+
+# Check if Python exists and has correct version
+if ! command -v "$PYTHON" &> /dev/null; then
+    echo "Error: Python not found. Please install Python 3.12+ or create a virtual environment."
+    exit 1
+fi
+
+# Run the CLI
+cd "$SCRIPT_DIR"
+exec "$PYTHON" -m src.cli "$@"

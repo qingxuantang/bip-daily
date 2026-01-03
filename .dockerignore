@@ -1,0 +1,66 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+autogen/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Runtime data (mounted as volumes)
+data/
+logs/
+config/*.json
+config/projects.yaml
+
+# Environment files (passed via env_file)
+.env
+.env.local
+.env.production
+
+# Node.js
+node_modules/
+mcp-servers/social-media-mcp/node_modules/
+mcp-servers/social-media-mcp/build/
+
+# Documentation and non-essential files
+*.md
+!README.md
+docs/
+
+# Test files
+tests/
+*.test.py
+*.spec.ts
+
+# Claude files
+.claude/
